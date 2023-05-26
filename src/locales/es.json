@@ -1,0 +1,14 @@
+{
+    "price": "Precio",
+    "type": "Tipo",
+    "notes": "Notas",
+    "date": "Fecha cultivo",
+    "height": "Cultivado a una altura de ",
+    "region": "Region",
+    "coffee": "Cafes", 
+    "name": "Nombre", 
+    "login-error": "Error de autenticación. Revise sus credenciales ", 
+    "session": "Inicio de sesión", 
+    "user": "Nombre de usuario",
+    "pass": "Contraseña"
+}

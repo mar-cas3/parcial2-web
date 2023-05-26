@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { IntlProvider } from 'react-intl';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import CoffeeList from "./components/Coffee/CoffeeList";
+import Login from "./components/Login/Login";
+import localeEnMessages from "./locales/en";
+import localeEsMessages from "./locales/es";
 
+const language = navigator.language || navigator.userLangiage;
+let langStr = "en";
+let messages = localeEnMessages;
+if (language.includes("es")) {
+  langStr = "es-ES";
+  messages = localeEsMessages;
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <IntlProvider locale={langStr} messages={messages}>
+      <h1 class="page-title">El aroma mágico</h1>
+  <img src="./banner.png"></img>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/coffees" element={<CoffeeList />} />
+          </Routes>
+        </BrowserRouter>
+        <footer>Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico</footer>
+      </IntlProvider>
     </div>
   );
 }

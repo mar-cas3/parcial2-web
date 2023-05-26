@@ -1,0 +1,17 @@
+.coffee-data {
+    background: rgba(224, 187, 187, 0.2);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex; 
+    flex-direction: column;
+    padding: 5% 5%; 
+    text-align: center;
+    height: auto;
+}
+
+
+ul {
+list-style-type: none;
+margin: 0; 
+padding: 0;
+}

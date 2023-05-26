@@ -8,7 +8,7 @@ export const getLogin =  (loginPayload) => {
             },
             body: JSON.stringify(loginPayload)
     }).then(response => response.json())
-    .then(data => data.status === 'success' ? true : false)
+    .then(data => data.status === 'success'  ||   data.status === 'Success' ? true : false)
 }
 
 export const getCoffees = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { IntlProvider } from 'react-intl';
+import { IntlProvider } from "react-intl";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import CoffeeList from "./components/Coffee/CoffeeList";
@@ -17,17 +17,18 @@ if (language.includes("es")) {
 function App() {
   return (
     <div className="App">
-      
       <IntlProvider locale={langStr} messages={messages}>
-      <h1 class="page-title">El aroma mágico</h1>
-  <img src="./banner.png"></img>
+        <h1 class="page-title">El aroma mágico</h1>
+        <img className='banner' src="./banner.png" alt="Coffe beans"></img>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/coffees" element={<CoffeeList />} />
           </Routes>
         </BrowserRouter>
-        <footer>Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico</footer>
+        <footer>
+          Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico
+        </footer>
       </IntlProvider>
     </div>
   );

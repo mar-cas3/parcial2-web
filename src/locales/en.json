@@ -4,6 +4,7 @@
     "notes": "Notes",
     "date": "Date of cultivation",
     "height": "Cultivated at a height of ",
+    "height-units": " masl",
     "region": "Region",
     "coffee": "Coffees", 
     "name": "Name", 

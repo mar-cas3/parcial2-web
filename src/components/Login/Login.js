@@ -37,11 +37,11 @@ function Login() {
 
   // return a component for a login form
   return (
-    <div className="div">
+    <div className="loginContainer">
       <h2>
         <FormattedMessage id="session" />
       </h2>
-      <div className="loginContainer">
+      <div className="inputContainer">
         <Form>
           <Form.Group className="dataInput">
             <Form.Label htmlFor="login">
@@ -52,7 +52,7 @@ function Login() {
               className="form-control"
               id="login"
               aria-describedby="loginHelp"
-              placeholder="Enter login"
+              // placeholder="Enter login"
               onChange={(data) => setLogin(data.target.value)}
             />
           </Form.Group>
@@ -64,20 +64,20 @@ function Login() {
               type="password"
               className="form-control"
               id="password"
-              placeholder="Password"
+              // placeholder="Password"
               onChange={(data) => setPassword(data.target.value)}
             />
           </Form.Group>
           <div className="buttons">
-            <Button className="enter" type="submit" onClick={handleSubmit}>
+            <button className="enter" type="submit" onClick={handleSubmit}>
               Ingresar
-            </Button>
-            <Button className="cancel" type="cancel" onClick={handleCancel}>
+            </button>
+            <button className="cancel" type="cancel" onClick={handleCancel}>
               Cancelar
-            </Button>
+            </button>
           </div>
         </Form>
-        {!success && <FormattedMessage id="login-error" />}
+        {!success && <p className="error"><FormattedMessage id="login-error" /></p>}
       </div>
     </div>
   );

@@ -1,5 +1,9 @@
 .list-grid {
-    display: grid; 
-    grid-template-columns: 2fr 1fr;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 3fr 500px;
     grid-column-gap: 3em;
+    font-size: 1em;
+    line-height: 3;
 }

@@ -33,9 +33,9 @@ function CoffeeList() {
 
   return (
     <div className="list-grid">
-      <div>
+      <div className="table table-md">
         <table class="table">
-          <thead className="thead-dark">
+          <thead className="table-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">
@@ -55,7 +55,7 @@ function CoffeeList() {
           <tbody>{buildCards}</tbody>
         </table>
       </div>
-      <div>{clicked && drawDetail()}</div>
+      <div className="detail">{clicked && drawDetail()}</div>
     </div>
   );
 }
